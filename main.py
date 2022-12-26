@@ -524,11 +524,13 @@ while run:
                                                 continue
                                             if button.text == "START":
                                                 for i in range(len(actions_stack)):
+                                                    if len(actions_stack) == animated_history_index:
+                                                        break
                                                     draw_animated_history_win(Animated_history_window, actions_stack[animated_history_index])
                                                     pygame.display.update()
                                                     pygame.time.delay(500)  # delay for 500 milliseconds
                                                     animated_history_index += 1
-                                            break 
+                                            break
                         break
 
                     if button.name == "FillBucket":
