@@ -23,12 +23,12 @@ class Button:
          
 
         elif self.shape == "rectangle":
-            pygame.draw.rect(win, self.color,(self.x, self.y, self.width, self.height))
-            pygame.draw.rect(win, BLACK,(self.x, self.y, self.width, self.height), 2)
+            pygame.draw.rect(win, self.color,(self.x, self.y, self.width, self.height)) #fill
+            pygame.draw.rect(win, BLACK,(self.x, self.y, self.width, self.height), 2) #border
 
         elif self.shape == "ellipse":
             pygame.draw.ellipse(win, self.color, (self.x, self.y, self.width, self.height)) #fill
-            # pygame.draw.ellipse(win, BLACK, (self.x, self.y, self.width, self.height), 2) #border
+            pygame.draw.ellipse(win, BLACK, (self.x, self.y, self.width, self.height), 2) #border
 
         
 
